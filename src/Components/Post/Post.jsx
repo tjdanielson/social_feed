@@ -9,8 +9,6 @@ const Post = (props) => {
             <div>
                 <h3>{props.post.name}</h3>
                 <p>{props.post.post}</p>
-            </div>
-            <div>
                 <LikeDislikePost />
             </div>
         </div>
