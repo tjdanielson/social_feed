@@ -9,6 +9,7 @@ const LikeDislikePost = (props) => {
     function handleLikeClick(){
         if(likeButtonClass === 'inactive'){
             setLikeButtonClass('like-active')
+            setDislikeButtonClass('inactive')
         } else {
             setLikeButtonClass('inactive')
         }
@@ -17,6 +18,7 @@ const LikeDislikePost = (props) => {
     function handleDislikeClick(){
         if(dislikeButtonClass === 'inactive'){
             setDislikeButtonClass('dislike-active')
+            setLikeButtonClass('inactive')
         } else {
             setDislikeButtonClass('inactive')
         }
