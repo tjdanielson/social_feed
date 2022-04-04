@@ -2,9 +2,17 @@ import React from 'react';
 
 const CreatePost = (props) => {
     return ( 
-        <div>
-
-        </div>
+        <form>
+            <div>
+                <label>Name</label>
+                <input type='text'/>
+            </div>
+            <div>
+                <label>Post</label>
+                <input type='text'/>
+            </div>
+            <button type='submit'>Submit</button>
+        </form>
      );
 }
  
