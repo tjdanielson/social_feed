@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import LikeDislikePost from '../LikeDislikePost/LikeDislikePost';
 
 const Post = (props) => {
+
+
     return ( 
         <div>
             <div>
@@ -8,16 +11,11 @@ const Post = (props) => {
                 <p>{props.post.post}</p>
             </div>
             <div>
-                <div>
-                    <button>Like</button>
-                </div>
-                <div>
-                    <button>Dislike</button>
-                </div>
+                <LikeDislikePost />
             </div>
         </div>
-
      );
+
 }
  
 export default Post;
