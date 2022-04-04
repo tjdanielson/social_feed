@@ -1,58 +1,38 @@
 import React, {useState, useEffect} from 'react';
+import './LikeDislikePost.css'
 
 const LikeDislikePost = (props) => {
+
+    const [likeButtonClass, setLikeButtonClass] = useState('inactive');
+    const [dislikeButtonClass, setDislikeButtonClass] = useState('inactive');
+
+    function handleLikeClick(){
+        if(likeButtonClass === 'inactive'){
+            setLikeButtonClass('like-active')
+        } else {
+            setLikeButtonClass('inactive')
+        }
+    }
+
+    function handleDislikeClick(){
+        if(dislikeButtonClass === 'inactive'){
+            setDislikeButtonClass('dislike-active')
+        } else {
+            setDislikeButtonClass('inactive')
+        }
+    }
     
-    const [like, setLike] = useState();
-    const [dislike, setDislike] = useState();
-    var likeimg = './assets/thumbsup_gray.png'
-    var dislikeimg;
-  
-    useEffect(() => {
-        if(like) {
-            likeimg = './assets/thumbsup_green.png'
-            console.log('useeffectworked')
-        } else {
-            likeimg = './assets/thumbsup_gray.png'
-        }
-    },[like])
-
-    // useEffect(() => {
-    //     dislike ? dislikeimg = './assets/thumbsdown_red.png' : dislikeimg = './assets/thumbsdown_gray.png'
-    // },[like])
-
-    function onClickLike() {
-        if(like) {
-            setLike(false)
-            console.log('like false')
-            likeimg = './assets/thumbsup_gray.png'
-        } else {
-            setLike(true)
-            likeimg = './assets/thumbsup_green.png'
-            setDislike(false)
-            dislikeimg = './assets/thumbsdown_red.png'
-            console.log('like true')
-        }
-    }
-
-    function onClickDislike() {
-        if(dislike) {
-            setDislike(false)
-        } else {
-            setDislike(true)
-            setLike(false)
-        }
-    }
 
     return (
         <div>
             <div>
-                <button onClick={onClickLike}>like</button> 
-                <img src={likeimg}/>
+                <button className={likeButtonClass} onClick={handleLikeClick}>Like</button>
             </div>
             <div>
-                <button onClick={onClickDislike}>dislike</button> 
+                <button className={dislikeButtonClass} onClick={handleDislikeClick}>Dislike</button>
             </div>
         </div>
+
     )
 }
 
