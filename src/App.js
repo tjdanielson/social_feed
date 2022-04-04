@@ -16,11 +16,16 @@ function App() {
       post: 'Welcome to Social Feed!'
     }, 
   ])
+
+  function addNewPost(post) {
+    let tempPosts = [post, ...posts];
+    setPosts(tempPosts);
+  }
   
   return (
     <div >
       <NavBar />
-      <CreatePost/>
+      <CreatePost addNewPost={addNewPost}/>
       <DisplayPosts posts={posts} />
     </div>
   );
