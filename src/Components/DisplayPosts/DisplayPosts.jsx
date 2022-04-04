@@ -1,25 +1,11 @@
 import React from 'react';
+import Post from '../Post/Post';
 
 const DisplayPosts = (props) => {
     return ( 
         props.posts.map((post) => 
-        <div>
-            <div>
-                <h3>{post.name}</h3>
-                <p>{post.post}</p>
-            </div>
-            <div>
-                <div>
-                    Like
-                </div>
-                <div>
-                    Dislike
-                </div>
-            </div>
-        </div>
-
+            <Post post={post}/>
         )
-
      );
 }
  
