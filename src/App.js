@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import CreatePost from './Components/CreatePost/CreatePost';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
+import './app.css'
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
   }
   
   return (
-    <div >
+    <div className='all-container'>
       <NavBar />
       <CreatePost addNewPost={addNewPost}/>
       <DisplayPosts posts={posts} />

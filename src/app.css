@@ -1,0 +1,17 @@
+.all-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    margin: 1em;
+}
+
+.navbar h3 {
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.navbar small {
+    color: gray;
+    font-size: 1em;
+}
