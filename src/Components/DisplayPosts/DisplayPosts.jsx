@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Post from '../Post/Post';
-import LikeDislikePost from '../LikeDislikePost/LikeDislikePost';
 
 const DisplayPosts = (props) => {
 
 
     return ( 
         props.posts.map((post, i) => 
-        <div key={i}>
-            <Post post={post}/>
-        </div>
+            <div key={i}>
+                <Post post={post}/>
+            </div>
         )
      )
 }

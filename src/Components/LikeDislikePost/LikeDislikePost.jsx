@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import DisplayPosts from '../DisplayPosts/DisplayPosts';
 import './LikeDislikePost.css'
 
 const LikeDislikePost = (props) => {

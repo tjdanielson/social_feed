@@ -32,7 +32,8 @@ function App() {
     let tempPosts = [...posts, post];
     setPosts(tempPosts);
   }
-  
+
+
   return (
     <div className='all-container'>
       <NavBar />
