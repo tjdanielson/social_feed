@@ -13,11 +13,10 @@ const Post = (props) => {
                 <div className='date'>
                     <p>{props.post.date}</p>
                 </div>
-                <LikeDislikePost post={props.post}/>
+            <LikeDislikePost post={props.post}  />
             </div>
         </div>
      );
-
 }
  
 export default Post;

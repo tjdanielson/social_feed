@@ -5,7 +5,7 @@ const CreatePost = (props) => {
     const [name, setName] = useState('');
     const [post, setPost] = useState('');
 
-    function handleSubmit(event) {
+    const handleSubmit=(event) =>{
         event.preventDefault();
         let newPost = {
             name: name,
@@ -17,7 +17,7 @@ const CreatePost = (props) => {
     }
 
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={e=>handleSubmit(e)}>
             <div className="form-container">
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Name</label>

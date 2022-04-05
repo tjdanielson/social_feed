@@ -27,9 +27,9 @@ function App() {
   const current = new Date();
   const date = `${current.getMonth()+1}-${current.getDate()}-${current.getFullYear()}`
 
-  function addNewPost(post) {
+  const addNewPost=(post)=> {
     post.date = date;
-    let tempPosts = [post, ...posts];
+    let tempPosts = [...posts, post];
     setPosts(tempPosts);
   }
   

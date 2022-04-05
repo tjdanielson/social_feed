@@ -1,83 +1,65 @@
 import React, {useState, useEffect} from 'react';
+import DisplayPosts from '../DisplayPosts/DisplayPosts';
 import './LikeDislikePost.css'
 
 const LikeDislikePost = (props) => {
 
     const [likeActive, setLikeActive] = useState(false);
+    const [dislikeActive, setDislikeActive] = useState(false);
 
     const [likeButtonClass, setLikeButtonClass] = useState('inactive');
     const [dislikeButtonClass, setDislikeButtonClass] = useState('inactive');
 
-    function handleLikeClick() {
-        if(props.post.like === false){
-            props.post.like = true;
-            setLikeActive(true);
-            props.post.dislike = false;
+
+    const handleLikeClick = () => {
+        if (likeActive) {
+            setLikeActive(false);
         } else {
-            props.post.like = false;
+            setLikeActive(true);
+            setDislikeActive(false)
+        }
+    }
+
+    const handleDislikeClick = () => {
+        if (dislikeActive) {
+            setDislikeActive(false);
+        } else {
+            setDislikeActive(true);
             setLikeActive(false);
         }
     }
 
-    function handleDislikeClick() {
-        if(props.post.dislike === false){
-            props.post.dislike = true;
-            props.post.like = false;
-        } else {
-            props.post.dislike = false;
-        }
-    }
-
     useEffect(() => {
-        if(props.post.like === false){
+        if(likeActive === true){
+            setLikeButtonClass('like-active')
+            console.log('useeffect - like active')
+        } else if(likeActive === false) {
             setLikeButtonClass('inactive')
-        } else {
-            setLikeButtonClass('active')
+            console.log('useeffect - like inactive')
         }
     }, [likeActive])
 
     useEffect(() => {
-        if(props.post.dislike === false){
+        if(dislikeActive === false){
             setDislikeButtonClass('inactive')
+            console.log('useeffect - dislike inactive')
         } else {
-            setDislikeButtonClass('active')
+            setDislikeButtonClass('dislike-active')
+            console.log('useeffect - dislike active')
         }
-    }, [props.post.dislike])
+    }, [dislikeActive])
 
-    debugger;
-
-    // function handleLikeClick(){
-    //     if(likeButtonClass === 'inactive'){
-    //         setLikeButtonClass('like-active')
-    //         setDislikeButtonClass('inactive')
-    //     } else {
-    //         setLikeButtonClass('inactive')
-    //     }
-    // }
-
-    // function handleDislikeClick(){
-    //     if(dislikeButtonClass === 'inactive'){
-    //         setDislikeButtonClass('dislike-active')
-    //         setLikeButtonClass('inactive')
-    //     } else {
-    //         setDislikeButtonClass('inactive')
-    //     }
-    // }
-    
 
     return (
         <div className="button-wrapper">
             <div className='button-img'>
-                <button className={likeButtonClass} onClick={handleLikeClick}>Like</button>
+                <button className={likeButtonClass} onClick={(e)=>handleLikeClick(e)}>Like</button>
             </div>
             <div>
-                <button className={dislikeButtonClass} onClick={handleDislikeClick}>Dislike</button>
+                <button className={dislikeButtonClass} onClick={(e)=>handleDislikeClick(e)}>Dislike</button>
             </div>
         </div>
-
     )
 }
 
 export default LikeDislikePost;
-
-
