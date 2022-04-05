@@ -24,6 +24,7 @@ const LikeDislikePost = (props) => {
         }
     }
     
+    debugger;
 
     return (
         <div>

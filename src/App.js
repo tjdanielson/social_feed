@@ -9,11 +9,16 @@ function App() {
   const [posts, setPosts] = useState([
     {
       name: 'earlybird888', 
-      post: 'First!!'
+      post: 'First!!',
+      like: false,
+      dislike: false,
     },
     {
       name: 'Administrator', 
-      post: 'Welcome to Social Feed!'
+      post: 'Welcome to Social Feed!',
+      like: false,
+      dislike: false,
+
     }, 
   ])
 
