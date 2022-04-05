@@ -31,8 +31,12 @@ function App() {
   return (
     <div className='all-container'>
       <NavBar />
-      <CreatePost addNewPost={addNewPost}/>
-      <DisplayPosts posts={posts} />
+      <div className='content-container'>
+        <CreatePost addNewPost={addNewPost}/>
+        <div className="post-container">
+          <DisplayPosts posts={posts} />
+        </div>
+      </div>
     </div>
   );
 }

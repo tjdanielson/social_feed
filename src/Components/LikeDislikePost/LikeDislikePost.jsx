@@ -6,6 +6,7 @@ const LikeDislikePost = (props) => {
     const [likeButtonClass, setLikeButtonClass] = useState('inactive');
     const [dislikeButtonClass, setDislikeButtonClass] = useState('inactive');
 
+
     function handleLikeClick(buttonValue){
         if(likeButtonClass === 'inactive'){
             setLikeButtonClass('like-active')
@@ -27,8 +28,8 @@ const LikeDislikePost = (props) => {
     debugger;
 
     return (
-        <div>
-            <div>
+        <div className="button-wrapper">
+            <div className='button-img'>
                 <button className={likeButtonClass} onClick={e => handleLikeClick(e.target.value)}>Like</button>
             </div>
             <div>

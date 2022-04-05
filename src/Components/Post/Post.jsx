@@ -1,16 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import LikeDislikePost from '../LikeDislikePost/LikeDislikePost';
 
+
 const Post = (props) => {
 
 
     return ( 
-        <div>
-            <div>
-                <h3>{props.post.name}</h3>
-                <p>{props.post.post}</p>
-                <LikeDislikePost />
-            </div>
+        <div className="post">
+            <h4>{props.post.name}</h4>
+            <p>{props.post.post}</p>
+            <LikeDislikePost />
         </div>
      );
 

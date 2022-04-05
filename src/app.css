@@ -15,3 +15,57 @@
     color: gray;
     font-size: 1em;
 }
+
+.content-container {
+    background-color: rgb(226, 242, 238);
+    padding-top: 1em;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2em;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px lightgray;
+}
+
+.form-group {
+    margin: 1em;
+}
+
+.post-container {
+    display: block;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 4em;
+}
+
+.post {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px lightgray;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: right;
+}
+
+.button-wrapper button {
+    margin: .5em;
+    background-image: './assets/thumbsup_gray.png';
+}
+
+.button-img img {
+    height: 100%;
+}
+
+
