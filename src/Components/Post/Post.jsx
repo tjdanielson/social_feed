@@ -9,7 +9,12 @@ const Post = (props) => {
         <div className="post">
             <h4>{props.post.name}</h4>
             <p>{props.post.post}</p>
-            <LikeDislikePost />
+            <div className="bottom-content-holder">
+                <div className='date'>
+                    <p>{props.post.date}</p>
+                </div>
+                <LikeDislikePost />
+            </div>
         </div>
      );
 

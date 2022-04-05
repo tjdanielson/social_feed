@@ -13,17 +13,22 @@ function App() {
       post: 'First!!',
       like: false,
       dislike: false,
+      date: '4-4-2022'
     },
     {
       name: 'Administrator', 
       post: 'Welcome to Social Feed!',
       like: false,
       dislike: false,
-
+      date: '4-4-2022'
     }, 
   ])
 
+  const current = new Date();
+  const date = `${current.getMonth()+1}-${current.getDate()}-${current.getFullYear()}`
+
   function addNewPost(post) {
+    post.date = date;
     let tempPosts = [post, ...posts];
     setPosts(tempPosts);
   }
