@@ -11,9 +11,13 @@ const CreatePost = (props) => {
             name: name,
             post: post,
         };
-        props.addNewPost(newPost);
-        setName('');
-        setPost('');
+        if(name == '' || post == ''){
+            alert(`Please add a name and post content to create a post.`)
+        } else {
+            props.addNewPost(newPost);
+            setName('');
+            setPost('');
+        }
     }
 
     return ( 
