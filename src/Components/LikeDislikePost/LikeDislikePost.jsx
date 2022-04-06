@@ -31,20 +31,16 @@ const LikeDislikePost = (props) => {
     useEffect(() => {
         if(likeActive === true){
             setLikeButtonClass('like-active')
-            console.log('useeffect - like active')
         } else if(likeActive === false) {
             setLikeButtonClass('inactive')
-            console.log('useeffect - like inactive')
         }
     }, [likeActive])
 
     useEffect(() => {
         if(dislikeActive === false){
             setDislikeButtonClass('inactive')
-            console.log('useeffect - dislike inactive')
         } else {
             setDislikeButtonClass('dislike-active')
-            console.log('useeffect - dislike active')
         }
     }, [dislikeActive])
 
