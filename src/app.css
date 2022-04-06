@@ -37,6 +37,12 @@
     margin: 1em;
 }
 
+.create-post-date {
+    margin-top: .25em;
+    font-style: italic;
+    font-size: small;
+}
+
 .post-container {
     display: flex;
     flex-direction: column-reverse;

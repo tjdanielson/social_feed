@@ -38,7 +38,7 @@ function App() {
     <div className='all-container'>
       <NavBar />
       <div className='content-container'>
-        <CreatePost addNewPost={addNewPost}/>
+        <CreatePost addNewPost={addNewPost} date={date}/>
         <div className="post-container">
           <DisplayPosts posts={posts} />
         </div>

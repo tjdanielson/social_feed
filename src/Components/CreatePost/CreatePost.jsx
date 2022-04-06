@@ -34,6 +34,9 @@ const CreatePost = (props) => {
                     <div className="col-auto">
                         <button className="btn btn-primary" type='submit'>Create</button>
                     </div>
+                    <div className="create-post-date">
+                        Posting Date: {props.date}
+                    </div>
             </div>
         </form>
      );
