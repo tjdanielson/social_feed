@@ -9,6 +9,7 @@
 .navbar h3 {
     font-weight: normal;
     font-size: 2em;
+    margin-left: 2em;
 }
 
 .navbar small {
@@ -80,10 +81,16 @@
 
 .button-wrapper button {
     margin: .5em;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 2px 2px 2px lightgray;
 }
 
 .button-img img {
     height: 100%;
+
 }
+
+
 
 
